@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-foreground font-sans text-base leading-[1.8] overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-foreground;
+  }
+
+  h1 {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    @apply font-bold leading-[1.05] tracking-[-0.05em] mb-6;
+  }
+
+  h2 {
+    font-size: clamp(2.3rem, 4vw, 3.8rem);
+    @apply font-bold leading-[1.15] tracking-[-0.04em] mb-6;
+  }
+
+  h3 {
+    @apply text-[1.35rem] font-semibold tracking-[-0.02em];
+  }
+
+  p {
+    @apply text-muted max-w-[75ch];
+  }
+
+  a {
+    @apply no-underline text-inherit transition-all duration-300;
+  }
+}
+
+@layer components {
+  .container {
+    width: min(90%, 1200px);
+    @apply mx-auto;
+  }
+
+  .section {
+    @apply py-[120px];
+  }
+
+  .section-alt {
+    @apply py-[120px] bg-[#EBEBEB];
+  }
+
+  .section-label {
+    @apply inline-block mb-5 text-accent uppercase tracking-[.15em] text-[.8rem] font-bold;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-2.5 px-[18px] py-3 rounded-full bg-accent/[0.12] border border-accent/25 text-accent mb-8 text-sm font-medium;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-[14px] bg-accent text-white font-bold shadow-sm hover:bg-accent-hover hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-7 py-4 rounded-[14px] border border-border text-foreground bg-white hover:bg-[#EBEBEB] transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-md p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-surface-light hover:border-accent/25;
+  }
+
+  .cards {
+    @apply grid gap-6;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .stat {
+    @apply bg-surface border border-border rounded-md p-8 transition-all duration-300;
+  }
+
+  .timeline-item {
+    @apply relative pl-7 border-l-2 border-accent;
+  }
+
+  .article-card {
+    @apply bg-surface border border-border rounded-md p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-surface-light hover:border-accent/25;
+  }
+
+  .article-category {
+    @apply inline-block mb-3 text-accent uppercase tracking-[.15em] text-[.75rem] font-bold;
+  }
+
+  .social-card {
+    @apply bg-surface border border-border rounded-md p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-surface-light hover:border-accent/25 block;
+  }
+
+  .opportunity-card {
+    @apply bg-surface border border-border rounded-md p-8 transition-all duration-300;
+  }
+
+  .contact-cta {
+    @apply text-center py-[140px];
+  }
+}
