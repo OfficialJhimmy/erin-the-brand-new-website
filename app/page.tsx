@@ -5,7 +5,7 @@ import FeaturedProjects   from '@/components/home/FeaturedProjects'
 import ExperienceTimeline from '@/components/home/ExperienceTimeline'
 import InsightsPreview    from '@/components/home/InsightsPreview'
 import ApproachSection    from '@/components/home/ApproachSection'
-import ContactCTA         from '@/components/shared/ContactCTA'
+import EngagementTerminal from '@/components/home/EngagementTerminal'
 
 export default function Home() {
   return (
@@ -17,12 +17,7 @@ export default function Home() {
       <ExperienceTimeline />
       <InsightsPreview />
       <ApproachSection />
-      <ContactCTA
-        heading="Let's Build Something Valuable"
-        description="Interested in AI implementation, architecture, automation, or engineering leadership opportunities?"
-        buttonText="Contact Me"
-        buttonHref="/contact"
-      />
+      <EngagementTerminal/>
     </main>
   )
 }

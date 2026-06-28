@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import PageHero            from '@/components/shared/PageHero'
 import ProjectCaseStudies  from '@/components/projects/ProjectCaseStudies'
-import ProjectCapabilities from '@/components/projects/ProjectCapabilities'
 import ProjectLessons      from '@/components/projects/ProjectLessons'
-import ContactCTA          from '@/components/shared/ContactCTA'
+import ProjectsHero from '@/components/projects/ProjectsHero'
+import ProjectCaseStudiesShowcase from '@/components/projects/ProjectCaseStudiesShowcase'
+import EngagementTerminal from '@/components/home/EngagementTerminal'
 
 export const metadata: Metadata = {
   title: 'Projects | Feyijimi Erinle',
@@ -14,20 +14,11 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <main>
-      <PageHero
-        badge="Selected Work"
-        heading="Building AI Systems That Deliver Real Outcomes"
-        description="My work focuses on designing and deploying AI systems that improve operations, accelerate decision-making, and help organizations unlock value from their data."
-      />
-      <ProjectCaseStudies />
-      <ProjectCapabilities />
+      <ProjectsHero />
+      <ProjectCaseStudiesShowcase/>
+      {/* <ProjectCaseStudies /> */}
       <ProjectLessons />
-      <ContactCTA
-        heading="Interested In Building Something Similar?"
-        description="Whether you're exploring AI adoption, workflow automation, enterprise knowledge systems, or multi-agent architectures, I'd be happy to discuss your goals."
-        buttonText="Let's Talk"
-        buttonHref="/contact"
-      />
+      <EngagementTerminal/>
     </main>
   )
 }

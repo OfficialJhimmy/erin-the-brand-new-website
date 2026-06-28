@@ -177,7 +177,7 @@ function BlueprintGrid() {
       <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="bp-grid" width="32" height="32" patternUnits="userSpaceOnUse">
-            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#2563EB" strokeWidth="0.5" />
+            <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#FF8906" strokeWidth="0.5" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#bp-grid)" opacity="0.03" />
@@ -249,7 +249,7 @@ function ProjectWindow({
         </div>
 
         {/* Name */}
-        <h3 className="text-[1.45rem] font-bold text-[#0A0A0A] tracking-tight leading-none mb-1.5">
+        <h3 className="text-[1.45rem] font-bold text-[#1B1B1B] tracking-tight leading-none mb-1.5">
           {name}
         </h3>
 
@@ -323,7 +323,7 @@ function ConnectionLines({ hovered, triggered }: { hovered: string | null; trigg
             <motion.path
               d={d}
               fill="none"
-              stroke={isActive ? '#2563EB' : '#BFDBFE'}
+              stroke={isActive ? '#FF8906' : '#BFDBFE'}
               strokeWidth={isActive ? 2 : 1.2}
               strokeDasharray={isActive ? '0' : '5 4'}
               opacity={dimmed ? 0.2 : 1}
@@ -334,7 +334,7 @@ function ConnectionLines({ hovered, triggered }: { hovered: string | null; trigg
             {/* Midpoint dot */}
             <motion.circle
               cx={midX} cy={midY} r="3.5"
-              fill={isActive ? '#2563EB' : '#93C5FD'}
+              fill={isActive ? '#FF8906' : '#93C5FD'}
               opacity={dimmed ? 0.2 : 1}
               initial={{ scale: 0, opacity: 0 }}
               animate={triggered ? { scale: 1, opacity: dimmed ? 0.2 : 1 } : {}}
@@ -345,7 +345,7 @@ function ConnectionLines({ hovered, triggered }: { hovered: string | null; trigg
               cx={id === 'kora' ? CONN.kora.x : id === 'quill' ? CONN.quill.x : CONN.atlas.x}
               cy={id === 'kora' ? CONN.kora.y : id === 'quill' ? CONN.quill.y : CONN.atlas.y}
               r="4"
-              fill={isActive ? '#2563EB' : '#DBEAFE'}
+              fill={isActive ? '#FF8906' : '#DBEAFE'}
               stroke="white"
               strokeWidth="1.5"
               opacity={dimmed ? 0.2 : 1}
@@ -386,7 +386,7 @@ function SystemCore({ hovered }: { hovered: string | null }) {
         {/* Core node */}
         <motion.div
           className="relative z-10 w-14 h-14 rounded-2xl bg-accent flex items-center justify-center"
-          style={{ boxShadow: '0 0 0 4px rgba(37,99,235,0.15)' }}
+          style={{ boxShadow: '0 0 0 4px rgba(255,137,6,0.15)' }}
           animate={{ scale: [1, 1.04, 1] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         >
@@ -405,7 +405,7 @@ function SystemCore({ hovered }: { hovered: string | null }) {
 
       {/* Labels */}
       <div className="text-center">
-        <p className="text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[#0A0A0A]">System Core</p>
+        <p className="text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[#1B1B1B]">System Core</p>
         <motion.p
           key={label}
           initial={{ opacity: 0, y: 4 }}
@@ -525,7 +525,7 @@ export default function FeaturedProjects() {
             </motion.div>
 
             <motion.h2
-              className="!mb-3 text-[#0A0A0A] leading-[1.06]"
+              className="!mb-3 text-[#1B1B1B] leading-[1.06]"
               style={{ fontSize: 'clamp(2.6rem, 5vw, 4rem)' }}
               initial={{ opacity: 0, y: 28 }}
               animate={triggered ? { opacity: 1, y: 0 } : {}}
@@ -561,7 +561,7 @@ export default function FeaturedProjects() {
           <div className="flex items-center justify-between px-6 py-4 border-b border-[#EFEFEF]">
             <div className="flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-[#22C55E]" />
-              <span className="text-[0.75rem] font-bold tracking-[0.1em] text-[#0A0A0A]">ERIN SYSTEMS</span>
+              <span className="text-[0.75rem] font-bold tracking-[0.1em] text-[#1B1B1B]">ERIN SYSTEMS</span>
               <span className="text-[0.7rem] text-[#ADADAD] font-medium">v1.0</span>
             </div>
             {/* Fake window controls */}
@@ -586,7 +586,7 @@ export default function FeaturedProjects() {
             <div className="relative">
 
               {/* ── Section A: Project windows ──── */}
-              <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 px-6 pt-6">
+              <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-4 px-6 pt-6">
                 {projects.map((project, i) => (
                   <ProjectWindow
                     key={project.id}

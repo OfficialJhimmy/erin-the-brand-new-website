@@ -109,7 +109,7 @@ function BackgroundGrid() {
           cx={col * 28 + 14}
           cy={row * 28 + 14}
           r="1.5"
-          fill="#2563EB"
+          fill="#FF8906"
           opacity="0.18"
         />
       )
@@ -120,7 +120,7 @@ function BackgroundGrid() {
       <svg width="340" height="280" xmlns="http://www.w3.org/2000/svg">
         {dots}
         {/* Single blue accent square */}
-        <rect x="290" y="112" width="10" height="10" rx="1" fill="#2563EB" />
+        <rect x="290" y="112" width="10" height="10" rx="1" fill="#FF8906" />
       </svg>
     </div>
   )
@@ -160,7 +160,7 @@ function ArchCard({
         </div>
 
         {/* Name */}
-        <h3 className="text-[1.6rem] font-bold text-[#0A0A0A] tracking-tight mb-2 leading-none">
+        <h3 className="text-[1.6rem] font-bold text-[#1B1B1B] tracking-tight mb-2 leading-none">
           {name}
         </h3>
 
@@ -206,7 +206,7 @@ export default function ArchitectureShowcase() {
   const ease   = 'easeOut' as const
 
   return (
-    <section ref={ref} className="relative py-[120px] bg-white overflow-hidden">
+    <section ref={ref} className="relative py-[40px] lg:py-[120px] bg-white overflow-hidden">
       <BackgroundGrid />
 
       <div className="container relative z-10">
@@ -226,8 +226,8 @@ export default function ArchitectureShowcase() {
         </motion.div>
 
         <motion.h2
-          className="!mb-5 text-[#0A0A0A] leading-[1.08]"
-          style={{ fontSize: 'clamp(2.4rem, 4vw, 3.6rem)' }}
+          className="!mb-5 text-[#1B1B1B] leading-[1.08]"
+          style={{ fontSize: 'clamp(2.2rem, 4vw, 3.6rem)' }}
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -310,7 +310,7 @@ export default function ArchitectureShowcase() {
                 <div className="w-8 h-8 rounded-lg border border-[#EAEAEA] flex items-center justify-center text-accent mb-3">
                   <Icon size={16} />
                 </div>
-                <p className="text-[0.82rem] font-semibold text-[#0A0A0A] mb-1 max-w-none">
+                <p className="text-[0.82rem] font-semibold text-[#1B1B1B] mb-1 max-w-none">
                   {title}
                 </p>
                 <p className="text-[0.75rem] text-[#525252] leading-snug max-w-none">

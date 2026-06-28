@@ -43,7 +43,7 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-bg">
-      <div className="container grid lg:grid-cols-2 gap-10 items-center min-h-[calc(100vh-72px)] py-16 lg:py-0">
+      <div className="container grid lg:grid-cols-2 gap-14 lg:gap-10 items-center min-h-[calc(100vh-72px)] py-16 lg:py-0">
 
         {/* ── Left column ── */}
         <div className="flex flex-col justify-center">
@@ -71,7 +71,7 @@ export default function HeroSection() {
               >
                 <path
                   d="M3 7 Q75 2 150 6 Q225 10 297 5"
-                  stroke="#2563EB"
+                  stroke="#FF8906"
                   strokeWidth="3.5"
                   fill="none"
                   strokeLinecap="round"
@@ -92,7 +92,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-3 mb-10">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[14px] bg-foreground text-white text-sm font-semibold hover:bg-foreground/80 transition-all duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[14px] bg-gradient-to-r from-orange-400 to-yellow-400 text-black text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5"
             >
               View Projects
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -106,18 +106,18 @@ export default function HeroSection() {
               Explore Architectures
             </Link>
             <Link
-              href="/resume"
+              href="/about"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-[14px] border border-border bg-white text-foreground text-sm font-semibold hover:bg-[#EBEBEB] transition-all duration-300"
             >
-              Download Resume
+              About Me
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                <path d="M7 2v7M4 6.5l3 3 3-3M2.5 11.5h9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M5 3l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
           </div>
 
           {/* Stats */}
-          {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {stats.map(({ icon, value, label }) => (
               <div
                 key={label}
@@ -136,7 +136,7 @@ export default function HeroSection() {
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
 
         </div>
 
@@ -165,8 +165,8 @@ export default function HeroSection() {
           </div>
 
           {/* Floating info card */}
-          <div className="absolute top-[12%] right-0 z-20 bg-white rounded-2xl shadow-lg p-5 w-[195px]">
-            <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center mb-4">
+          <div className="absolute top-[40%] lg:top-[12%] right-0 z-20 bg-white rounded-2xl shadow-lg p-5 w-[195px]">
+            <div className="w-10 h-10 rounded-full bg-[#FF8906] flex items-center justify-center mb-4">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path
                   d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"

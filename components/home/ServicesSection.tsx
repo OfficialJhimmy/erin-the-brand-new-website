@@ -50,7 +50,7 @@ const IconRobot = ({ size = 18 }: { size?: number }) => (
 const IconCheck = () => (
   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center mt-0.5">
     <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-      <path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M2 5.5l2.5 2.5 4.5-4.5" stroke="#FF8906" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   </span>
 )
@@ -94,15 +94,15 @@ function BackgroundMesh() {
   const dots: React.ReactNode[] = []
   for (let col = 0; col <= 22; col++) {
     for (let row = 0; row <= 14; row++) {
-      dots.push(<circle key={`${col}-${row}`} cx={col * 48} cy={row * 40} r="1.4" fill="#2563EB" />)
+      dots.push(<circle key={`${col}-${row}`} cx={col * 48} cy={row * 40} r="1.4" fill="#FF8906" />)
     }
   }
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
       <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" opacity="0.04">
         {dots}
-        <path d="M0 300 Q250 240 500 300 Q750 360 1000 300" stroke="#2563EB" strokeWidth="1" fill="none"/>
-        <path d="M0 350 Q250 290 500 350 Q750 410 1000 350" stroke="#2563EB" strokeWidth="1" fill="none"/>
+        <path d="M0 300 Q250 240 500 300 Q750 360 1000 300" stroke="#FF8906" strokeWidth="1" fill="none"/>
+        <path d="M0 350 Q250 290 500 350 Q750 410 1000 350" stroke="#FF8906" strokeWidth="1" fill="none"/>
       </svg>
     </div>
   )
@@ -136,7 +136,7 @@ function ArchViz({ activeNode, triggered }: { activeNode: number | null; trigger
             <g key={node.id}>
               <motion.path
                 d={`M ${CENTER.x} ${CENTER.y} L ${nx} ${ny}`}
-                stroke={isActive ? '#2563EB' : '#DBEAFE'}
+                stroke={isActive ? '#FF8906' : '#DBEAFE'}
                 strokeWidth={isActive ? 1.8 : 1}
                 fill="none"
                 strokeDasharray="4 5"
@@ -146,7 +146,7 @@ function ArchViz({ activeNode, triggered }: { activeNode: number | null; trigger
               />
               <motion.circle
                 cx={mx} cy={my} r="2.5"
-                fill={isActive ? '#2563EB' : '#BFDBFE'}
+                fill={isActive ? '#FF8906' : '#BFDBFE'}
                 initial={{ scale: 0, opacity: 0 }}
                 animate={triggered ? { scale: 1, opacity: dimmed ? 0.2 : 1 } : {}}
                 transition={{ duration: 0.35, delay: 0.75 + i * 0.12 }}
@@ -163,9 +163,9 @@ function ArchViz({ activeNode, triggered }: { activeNode: number | null; trigger
           animate={{
             scale: [1, 1.1, 1],
             boxShadow: [
-              '0 0 0 0px rgba(37,99,235,0.4)',
-              '0 0 0 10px rgba(37,99,235,0)',
-              '0 0 0 0px rgba(37,99,235,0)',
+              '0 0 0 0px rgba(255,137,6,0.4)',
+              '0 0 0 10px rgba(255,137,6,0)',
+              '0 0 0 0px rgba(255,137,6,0)',
             ],
           }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
@@ -187,7 +187,7 @@ function ArchViz({ activeNode, triggered }: { activeNode: number | null; trigger
           >
             <div className={`w-8 h-8 rounded-xl border flex items-center justify-center transition-all duration-200 ${
               isActive
-                ? 'bg-accent text-white border-accent shadow-[0_0_0_4px_rgba(37,99,235,0.15)]'
+                ? 'bg-accent text-white border-accent shadow-[0_0_0_4px_rgba(255,137,6,0.15)]'
                 : 'bg-white border-[#EAEAEA] text-accent'
             }`}>
               <node.Icon size={15} />
@@ -254,7 +254,7 @@ export default function ServicesSection() {
 
             {/* Heading */}
             <motion.h2
-              className="!mb-5 text-[#0A0A0A] leading-[1.12]"
+              className="!mb-5 text-[#1B1B1B] leading-[1.12]"
               style={{ fontSize: 'clamp(2.1rem, 3.6vw, 3.2rem)' }}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -293,13 +293,13 @@ export default function ServicesSection() {
                 >
                   <div className={`w-9 h-9 rounded-xl border flex items-center justify-center flex-shrink-0 transition-all duration-200 ${
                     activeNode === i
-                      ? 'bg-accent text-white border-accent shadow-[0_0_0_4px_rgba(37,99,235,0.12)]'
+                      ? 'bg-accent text-white border-accent shadow-[0_0_0_4px_rgba(255,137,6,0.12)]'
                       : 'bg-[#F4F8FF] text-accent border-[#E6EEFF]'
                   }`}>
                     <Icon size={17} />
                   </div>
                   <span className={`text-[0.925rem] font-medium transition-colors duration-150 ${
-                    activeNode === i ? 'text-[#0A0A0A]' : 'text-[#525252]'
+                    activeNode === i ? 'text-[#1B1B1B]' : 'text-[#525252]'
                   }`}>
                     {text}
                   </span>
@@ -326,13 +326,13 @@ export default function ServicesSection() {
 
             {/* Terminal header row */}
             <div className="flex items-center justify-between gap-4 px-6 py-3.5 border-b border-[#F0F0F0]">
-              <span className="font-mono text-[0.78rem] text-[#0A0A0A] min-h-[1.2em]">
+              <span className="font-mono text-[0.78rem] text-[#1B1B1B] min-h-[1.2em]">
                 {typed}
                 {typed.length < TERMINAL_TEXT.length && (
                   <motion.span
                     animate={{ opacity: [1, 1, 0, 0] }}
                     transition={{ duration: 0.8, repeat: Infinity, times: [0, 0.499, 0.5, 1], ease: 'linear' }}
-                    className="inline-block w-[6px] h-[12px] bg-[#0A0A0A] ml-px align-middle"
+                    className="inline-block w-[6px] h-[12px] bg-[#1B1B1B] ml-px align-middle"
                   />
                 )}
               </span>
@@ -375,7 +375,7 @@ export default function ServicesSection() {
                       <IconCheck />
                       <div>
                         <p className={`text-[0.83rem] font-semibold leading-tight mb-1 max-w-none transition-colors duration-150 ${
-                          activeNode === id ? 'text-accent' : 'text-[#0A0A0A]'
+                          activeNode === id ? 'text-accent' : 'text-[#1B1B1B]'
                         }`}>
                           {title}
                         </p>

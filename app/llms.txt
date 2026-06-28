@@ -1,0 +1,16 @@
+# Feyijimi Erinle (Erin)
+
+> Lead AI Engineer and AI Systems Architect based in Lagos, Nigeria, working
+> at Refactrd. Specializes in AI agents, retrieval-augmented generation,
+> multi-agent systems, workflow automation, and AI solution architecture
+> for startups and enterprise teams.
+
+## Pages
+
+- [Home](/): Overview of services, architecture approach, and featured AI systems.
+- [About](/about): Background, career journey, philosophy, and approach to AI projects.
+- [Architecture](/architecture): Architecture principles, case studies, and design patterns.
+- [Projects](/projects): Case studies including Kora (enterprise knowledge assistant),
+  Quill (AI proposal generator), and Atlas (multi-agent research platform).
+- [Insights](/insights): Research notes and frameworks on AI systems.
+- [Contact](/contact): Ways to get in touch.
