@@ -155,7 +155,7 @@ export default function HeroSection() {
           {/* Hero photo */}
           <div className="relative z-10 flex items-end justify-center w-full h-full">
             <Image
-              src="/assets/images/hero-section-image.png"
+              src="/assets/images/hero-section-image.webp"
               alt="Feyijimi Erinle"
               width={520}
               height={640}
